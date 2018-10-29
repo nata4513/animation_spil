@@ -1,13 +1,7 @@
 body {
     margin: 0;
-}
-
-    {
     overflow: hidden;
 }
-
-/********************* STARTSKÆRM *****************/
-
 
 
 
@@ -24,6 +18,15 @@ body {
 
 /* ELEMENTER */
 
+@keyframes fall_down {
+    from {
+        top: -30vw;
+    }
+
+    to {
+        top: 90vw;
+    }
+}
 
 #gave {
     background-image: url(Produktion/gave.svg);
@@ -33,7 +36,15 @@ body {
     position: absolute;
     background-repeat: no-repeat;
     left: 50vw;
-    top: 20vw;
+    top: 35vw;
+}
+
+.gave_fall {
+    animation-name: fall_down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
 }
 
 
@@ -45,9 +56,16 @@ body {
     position: absolute;
     background-repeat: no-repeat;
     left: 20vw;
-    top: 11vw;
+    top: 35vw;
 }
 
+.candy_fall {
+    animation-name: fall_down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
 
 #bombe {
     background-image: url(Produktion/bombe.svg);
@@ -57,9 +75,16 @@ body {
     position: absolute;
     background-repeat: no-repeat;
     left: 70vw;
-    top: 4vw;
+    top: 35vw;
 }
 
+.bombe_fall {
+    animation-name: fall_down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in;
+}
 
 /* UI */
 
@@ -160,6 +185,46 @@ body {
     display: none;
 }
 
+/* UI */
+#ui_settings {
+    display: none;
+}
+
+#knapvolume {
+    background-image: url(Produktion/knap%20mute.svg);
+    width: 10vw;
+    height: 10vw;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 55vw;
+    top: 149vw;
+
+}
+
+#knapvolume1 {
+    background-image: url(Produktion/knap%20mute.svg);
+    width: 10vw;
+    height: 10vw;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 55vw;
+    top: 138vw;
+}
+
+#volume {
+    background-image: url(Produktion/volume.svg);
+    width: 25vw;
+    height: 10vw;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 44vw;
+    top: 160vw;
+
+}
+
 /********************* INFORMATION *****************/
 #information {
     background-image: url(Produktion/information.svg);
@@ -169,27 +234,77 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     display: none;
+
 }
 
 
 /********************* GAMEOVER *****************/
 #gameover {
-    background-image: url(Produktion/failed.svg);
+    background-image: url(Produktion/Level%20failed.svg);
     width: 100vw;
     height: 56vw;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+    display: none;
+
+}
+
+/* UI */
+#ui_gameover {
     display: none;
 }
 
+#gulpil {
+    background-image: url(Produktion/pil%20gul.svg);
+    width: 10vw;
+    height: 10vw;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 45vw;
+    top: 265vw;
+
+}
+
+
 /********************* LEVELCOMPLETE *****************/
 #levelcomplete {
-    background-image: url(Produktion/complete.svg);
+    background-image: url(Produktion/Level%20complete.svg);
     width: 100vw;
     height: 56vw;
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
     display: none;
+
+}
+
+/* UI */
+#ui_levelcomplete {
+    display: none;
+}
+
+#hvidpil {
+    background-image: url(Produktion/hvid%20pil.svg);
+    width: 10vw;
+    height: 10vw;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 35vw;
+    top: 310vw;
+
+}
+
+#nextlevel {
+    background-image: url(Produktion/N%C3%A6ste%20level.svg);
+    width: 10vw;
+    height: 10vw;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 55vw;
+    top: 310vw;
+
 }
