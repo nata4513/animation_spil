@@ -14,20 +14,12 @@ body {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 /* ELEMENTER */
 
-@keyframes fall_down {
-    from {
-        top: -30vw;
-    }
-
-    to {
-        top: 90vw;
-    }
-}
-
+/* GAVE */
 #gave {
     background-image: url(Produktion/gave.svg);
     width: 10vw;
@@ -39,14 +31,31 @@ body {
     top: 35vw;
 }
 
-.gave_fall {
-    animation-name: fall_down;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards;
-    animation-timing-function: ease-in;
+@keyframes fall_downgave {
+    0% {
+        top: -20vw;
+        left: 5vw;
+    }
+
+    50% {
+        left: 40vw;
+    }
+
+    100% {
+        top: 35vw;
+        left: 5vw;
+    }
 }
 
+.gave_fall {
+    animation-name: fall_downgave;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+/* CANDY */
 
 #candy {
     background-image: url(Produktion/candy.svg);
@@ -57,15 +66,35 @@ body {
     background-repeat: no-repeat;
     left: 20vw;
     top: 35vw;
+
+}
+
+@keyframes fall_downcandy {
+    0% {
+        top: -20vw;
+        left: 95vw;
+    }
+
+    70% {
+        left: 40vw;
+    }
+
+    100% {
+        top: 35vw;
+        left: 95vw;
+    }
 }
 
 .candy_fall {
-    animation-name: fall_down;
-    animation-duration: 3s;
+    animation-name: fall_downcandy;
+    animation-duration: 2.5s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
 }
+
+/* BOMBE */
+
 
 #bombe {
     background-image: url(Produktion/bombe.svg);
@@ -76,11 +105,28 @@ body {
     background-repeat: no-repeat;
     left: 70vw;
     top: 35vw;
+
+}
+
+@keyframes fall_downbombe {
+    0% {
+        top: -20vw;
+        left: 20vw;
+    }
+
+    70% {
+        left: 50vw;
+    }
+
+    100% {
+        top: 35vw;
+        left: 20vw;
+    }
 }
 
 .bombe_fall {
-    animation-name: fall_down;
-    animation-duration: 3s;
+    animation-name: fall_downbombe;
+    animation-duration: 2.5s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
@@ -129,14 +175,11 @@ body {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    display: none;
+
 }
 
 /* UI */
 
-#ui_start {
-    display: none;
-}
 
 #playsign {
     background-image: url(Produktion/play.svg);
@@ -145,8 +188,8 @@ body {
     background-size: 100%;
     position: absolute;
     background-repeat: no-repeat;
-    left: 75.5vw;
-    top: 90.1vw;
+    left: 75.6vw;
+    top: 34vw;
     z-index: 1;
 }
 
@@ -158,7 +201,7 @@ body {
     position: absolute;
     background-repeat: no-repeat;
     left: 85vw;
-    top: 102vw;
+    top: 46vw;
     z-index: 1;
 }
 
@@ -169,8 +212,8 @@ body {
     background-size: 100%;
     position: absolute;
     background-repeat: no-repeat;
-    left: 72vw;
-    top: 102.6vw;
+    left: 71.5vw;
+    top: 47vw;
     z-index: 1;
 }
 
@@ -182,14 +225,10 @@ body {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    display: none;
+
 }
 
 /* UI */
-#ui_settings {
-    display: none;
-}
-
 #knapvolume {
     background-image: url(Produktion/knap%20mute.svg);
     width: 10vw;
@@ -198,7 +237,7 @@ body {
     position: absolute;
     background-repeat: no-repeat;
     left: 55vw;
-    top: 149vw;
+    top: 26vw;
 
 }
 
@@ -210,7 +249,7 @@ body {
     position: absolute;
     background-repeat: no-repeat;
     left: 55vw;
-    top: 138vw;
+    top: 37vw;
 }
 
 #volume {
@@ -221,7 +260,19 @@ body {
     position: absolute;
     background-repeat: no-repeat;
     left: 44vw;
-    top: 160vw;
+    top: 48vw;
+
+}
+
+#kryds {
+    background-image: url(Produktion/escape.svg);
+    width: 10vw;
+    height: 10vw;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 85vw;
+    top: 45vw;
 
 }
 
@@ -233,10 +284,21 @@ body {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    display: none;
+
 
 }
 
+#kryds1 {
+    background-image: url(Produktion/escape.svg);
+    width: 10vw;
+    height: 10vw;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 85vw;
+    top: 45vw;
+
+}
 
 /********************* GAMEOVER *****************/
 #gameover {
@@ -246,14 +308,9 @@ body {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    display: none;
-
 }
 
 /* UI */
-#ui_gameover {
-    display: none;
-}
 
 #gulpil {
     background-image: url(Produktion/pil%20gul.svg);
@@ -263,7 +320,7 @@ body {
     position: absolute;
     background-repeat: no-repeat;
     left: 45vw;
-    top: 265vw;
+    top: 40vw;
 
 }
 
@@ -276,14 +333,11 @@ body {
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
-    display: none;
+
 
 }
 
 /* UI */
-#ui_levelcomplete {
-    display: none;
-}
 
 #hvidpil {
     background-image: url(Produktion/hvid%20pil.svg);
@@ -293,7 +347,7 @@ body {
     position: absolute;
     background-repeat: no-repeat;
     left: 35vw;
-    top: 310vw;
+    top: 30vw;
 
 }
 
@@ -305,6 +359,57 @@ body {
     position: absolute;
     background-repeat: no-repeat;
     left: 55vw;
-    top: 310vw;
+    top: 30vw;
 
+}
+
+
+/********************* JAVASCRIPT *****************/
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.blur {
+    filter: blur(5px) brightness(80%);
+}
+
+.fade_out {
+    animation-name: fadeout_kf;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout_kf {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.pulse {
+    animation-name: pulse_kf;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes pulse_kf {
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
