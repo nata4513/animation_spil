@@ -3,17 +3,23 @@ body {
     overflow: hidden;
 }
 
-
-
+#screen {
+    background-color: white;
+    position: relative;
+    width: 100vw;
+    height: 56.25vw;
+    overflow: hidden;
+}
 
 /********************* SPIL BAGGRUND *****************/
+#game {}
+
 #game_background {
     background-image: url(Produktion/game_background.svg);
-    width: 100vw;
-    height: 56vw;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
 
 }
 
@@ -29,27 +35,24 @@ body {
     background-repeat: no-repeat;
     left: 50vw;
     top: 35vw;
+    animation-delay: .4s;
 }
 
 @keyframes fall_downgave {
     0% {
         top: -20vw;
-        left: 5vw;
-    }
 
-    50% {
-        left: 40vw;
     }
 
     100% {
-        top: 35vw;
-        left: 5vw;
+        35vw;
+
     }
 }
 
 .gave_fall {
     animation-name: fall_downgave;
-    animation-duration: 2.5s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
@@ -66,28 +69,25 @@ body {
     background-repeat: no-repeat;
     left: 20vw;
     top: 35vw;
-
+    animation-delay: .7s;
 }
 
 @keyframes fall_downcandy {
     0% {
         top: -20vw;
-        left: 95vw;
-    }
 
-    70% {
-        left: 40vw;
     }
 
     100% {
-        top: 35vw;
-        left: 95vw;
+        35vw;
+
     }
+
 }
 
 .candy_fall {
     animation-name: fall_downcandy;
-    animation-duration: 2.5s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
@@ -105,28 +105,25 @@ body {
     background-repeat: no-repeat;
     left: 70vw;
     top: 35vw;
+    animation-delay: .10s;
 
 }
 
 @keyframes fall_downbombe {
     0% {
         top: -20vw;
-        left: 20vw;
-    }
 
-    70% {
-        left: 50vw;
     }
 
     100% {
-        top: 35vw;
-        left: 20vw;
+        35vw;
+
     }
 }
 
 .bombe_fall {
     animation-name: fall_downbombe;
-    animation-duration: 2.5s;
+    animation-duration: 2s;
     animation-iteration-count: infinite;
     animation-fill-mode: forwards;
     animation-timing-function: ease-in;
@@ -135,7 +132,7 @@ body {
 /* UI */
 
 #points {
-    background-image: url(Produktion/points.svg);
+    background-image: url(Produktion/Opn%C3%A5et%20gaver.svg);
     width: 10vw;
     height: 15vw;
     background-size: 100%;
@@ -145,10 +142,23 @@ body {
     top: 42vw;
 }
 
-#energy {
-    background-image: url(Produktion/life.svg);
-    width: 30vw;
+#points .antal {
+    color: white;
+    font-family: 'Spicy Rice', cursive;
+    font-size: 6vw;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 2.5vw;
+    top: 5vw;
+    width: 10vw;
     height: 15vw;
+
+}
+
+#heart1 {
+    background-image: url(Produktion/Liv.svg);
+    width: 9vw;
+    height: 9vw;
     background-size: 100%;
     position: absolute;
     background-repeat: no-repeat;
@@ -156,8 +166,42 @@ body {
     top: 48vw;
 }
 
+#heart2 {
+    background-image: url(Produktion/Liv.svg);
+    width: 9vw;
+    height: 9vw;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 20vw;
+    top: 48vw;
+}
+
+#heart3 {
+    background-image: url(Produktion/Liv.svg);
+    width: 9vw;
+    height: 9vw;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 30vw;
+    top: 48vw;
+}
+
+#time1 {
+    background-image: url(Produktion/tid1.svg);
+    width: 15vw;
+    height: 15vw;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 56vw;
+    top: 52vw;
+    z-index: 10;
+}
+
 #time {
-    background-image: url(Produktion/time.svg);
+    background-image: url(Produktion/Tid.svg);
     width: 40vw;
     height: 40vw;
     background-size: 100%;
@@ -170,12 +214,11 @@ body {
 /********************* STARTSKÆRM *****************/
 #start {
     background-image: url(Produktion/menu_background.svg);
-    width: 100vw;
-    height: 56vw;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
+    overflow: hidden;
 }
 
 /* UI */
@@ -220,16 +263,14 @@ body {
 /********************* SETTINGS *****************/
 #settings {
     background-image: url(Produktion/settings.svg);
-    width: 100vw;
-    height: 56vw;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
 }
 
 /* UI */
-#knapvolume {
+#knapmusic {
     background-image: url(Produktion/knap%20mute.svg);
     width: 10vw;
     height: 10vw;
@@ -241,7 +282,19 @@ body {
 
 }
 
-#knapvolume1 {
+#knapmusic1 {
+    background-image: url(Produktion/knap%20mute%201.svg);
+    width: 4.5vw;
+    height: 4.5vw;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 55vw;
+    top: 26vw;
+
+}
+
+#knapeffects {
     background-image: url(Produktion/knap%20mute.svg);
     width: 10vw;
     height: 10vw;
@@ -249,6 +302,17 @@ body {
     position: absolute;
     background-repeat: no-repeat;
     left: 55vw;
+    top: 37vw;
+}
+
+#knapeffects1 {
+    background-image: url(Produktion/knap%20mute%201.svg);
+    width: 4.5vw;
+    height: 4.5vw;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    left: 60.5vw;
     top: 37vw;
 }
 
@@ -279,13 +343,10 @@ body {
 /********************* INFORMATION *****************/
 #information {
     background-image: url(Produktion/information.svg);
-    width: 100vw;
-    height: 56vw;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
 }
 
 #kryds1 {
@@ -303,11 +364,10 @@ body {
 /********************* GAMEOVER *****************/
 #gameover {
     background-image: url(Produktion/Level%20failed.svg);
-    width: 100vw;
-    height: 56vw;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
 }
 
 /* UI */
@@ -328,13 +388,10 @@ body {
 /********************* LEVELCOMPLETE *****************/
 #levelcomplete {
     background-image: url(Produktion/Level%20complete.svg);
-    width: 100vw;
-    height: 56vw;
-    position: relative;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    position: absolute;
 }
 
 /* UI */

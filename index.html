@@ -6,57 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spil</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
 </head>
 
 <body>
     <div id="screen">
         <div id="menu_background"></div>
-    </div>
-    <div id="game" class="show">
-        <div id="game_background"></div>
 
-        <div id="game_elements">
+        <div id="game" class="hide">
+            <div id="game_background"></div>
             <div id="gave" class="gave_fall"></div>
             <div id="candy" class="candy_fall"></div>
             <div id="bombe" class="bombe_fall"></div>
-        </div>
 
-        <div id="game_ui">
-            <div id="points"></div>
-            <div id="energy"></div>
+
+
+            <div id="points">
+                <div class="antal">0</div>
+            </div>
+            <div id="energy">
+                <div id="heart1" class="heart"></div>
+                <div id="heart2" class="heart"></div>
+                <div id="heart3" class="heart"></div>
+            </div>
+
             <div id="time"></div>
+            <div id="time1"></div>
+
+
+        </div>
+
+        <div id="start" class="hide">
+            <div id="playsign"></div>
+            <div id="infosign"></div>
+            <div id="settingsign"></div>
+        </div>
+
+
+        <div id="settings" class="hide">
+            <div id="knapmusic"></div>
+            <div id="knapmusic1"></div>
+            <div id="knapeffects"></div>
+            <div id="knapeffects1"></div>
+            <div id="volume"></div>
+            <div id="kryds"></div>
+        </div>
+
+
+        <div id="information" class="hide">
+            <div id="kryds1"></div>
+        </div>
+
+        <div id="gameover" class="hide">
+            <div id="gulpil"></div>
+        </div>
+
+
+        <div id="levelcomplete" class="hide">
+            <div id="hvidpil"></div>
+            <div id="nextlevel"></div>
         </div>
     </div>
-
-    <div id="start" class="hide">
-        <div id="playsign"></div>
-        <div id="infosign"></div>
-        <div id="settingsign"></div>
-    </div>
-
-
-    <div id="settings">
-        <div id="knapvolume"></div>
-        <div id="knapvolume1"></div>
-        <div id="volume"></div>
-        <div id="kryds"></div>
-    </div>
-
-
-    <div id="information">
-        <div id="kryds1"></div>
-    </div>
-
-    <div id="gameover">
-        <div id="gulpil"></div>
-    </div>
-
-
-    <div id="levelcomplete">
-        <div id="hvidpil"></div>
-        <div id="nextlevel"></div>
-    </div>
-
     <script src="script.js">
 
     </script>
